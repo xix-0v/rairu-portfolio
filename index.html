@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAIRU's Portfolio</title>
+    
+</head>
+
+<body>
+
+<!-- SPINNING CORNER SYMBOL -->
+<div class="corner-symbol">
+    <img 
+        src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/hmpg%20-%20circle.png?raw=true"
+        alt="">
+</div>
+
+<div class="top-header">
+    Rairu's Portfolio
+</div>
+
+<div class="main-wrapper">
+
+    <!-- BACKGROUND CONTAINER -->
+    <div class="container"></div>
+
+    <!-- BORDER -->
+    <div class="border-container"></div>
+
+    <!-- CONTENT ON TOP -->
+    <div class="enter-piece">
+
+        <div class="creature">
+
+            <img 
+                class="mouth-closed"
+                src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/dawg-close.png?raw=true"
+                alt="">
+
+            <img 
+                class="mouth-open"
+                src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/dawg-open.png?raw=true"
+                alt="">
+
+            <a href="about.html" class="enter-button">Enter</a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- RAI-BOT -->
+<div class="rai-bot">
+
+    <img 
+        class="rai-pose-1"
+        src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/pose-1.png?raw=true"
+        alt="Rai-bot">
+
+    <img 
+        class="rai-pose-2"
+        src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/pose-2.png?raw=true"
+        alt="Rai-bot">
+
+    <img 
+        class="rai-pose-3"
+        src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/pose-3.png?raw=true"
+        alt="Rai-bot">
+    
+    <img 
+        class="rai-pose-4"
+        src="https://github.com/xix-0v/rairu-hmpg-img/blob/main/pose-4.png?raw=true"
+        alt="Rai-bot">
+
+    <div class="rai-speech" id="raiSpeech">
+        hello.
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<style>
+
+    :root {
+        --body-bg-image: url("https://github.com/xix-0v/rairu-hmpg-img/blob/main/Homepage%20Background.png?raw=true");
+    }
+
+    @font-face {
+        font-family: 'MecaGothix';
+        src: url(https://raw.githubusercontent.com/xix-0v/rairu-hmpg-font/main/MecaGothix.ttf) format('truetype');
+    }
+    @font-face {
+        font-family: 'Conthrax Semibold';
+        src: url(https://raw.githubusercontent.com/xix-0v/rairu-hmpg-font/main/Conthrax-SemiBold.otf) format('truetype');
+    }
+
+   body {
+    margin: 0;
+    min-height: 100vh;
+
+    background-image: var(--body-bg-image);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-header {
+    width: 580px;
+    margin: 0 auto 15px auto;
+
+    text-align: center;
+    font-family: 'MecaGothix';
+    font-size: 40px;
+    color: #c4c4c4;
+    letter-spacing: 3px;
+}
+
+.main-wrapper {
+    position: relative;
+
+    width: 580px;
+    height: 752px;
+}
+
+
+/* BACK */
+
+.container {
+    position: absolute;
+
+    width: 400px;
+    height: 500px;
+
+    background: #000;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+}
+
+
+/* MIDDLE */
+
+.border-container {
+    position: absolute;
+
+    width: 580px;
+    height: 752px;
+
+    background-image: url("https://github.com/xix-0v/rairu-hmpg-img/blob/main/hmpg%20-%20border.png?raw=true");
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    left: 0;
+    top: 0;
+
+    z-index: 2;
+}
+
+
+/* FRONT */
+
+.enter-piece {
+    position: absolute;
+
+    width: 250px;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+}
+
+    /* CREATURE */
+
+  .creature {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+}
+
+    /* BOTH CREATURE IMAGES */
+
+    .mouth-closed,
+    .mouth-open {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* OPEN MOUTH STARTS HIDDEN */
+
+    .mouth-open {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        opacity: 0;
+    }
+
+
+    /* HOVER = SWITCH TO OPEN MOUTH */
+
+    .creature:hover .mouth-closed {
+        opacity: 0;
+    }
+
+    .creature:hover .mouth-open {
+        opacity: 1;
+    }
+
+
+    /* ENTER BUTTON */
+
+    .enter-button {
+        position: absolute;
+
+        left: 50%;
+        top: 59%;
+
+        transform: translate(-50%, -50%);
+
+        color: lightgray;
+        font-family: 'MecaGothix';
+        font-size: 30px;
+        text-decoration: none;
+
+        opacity: 0;
+    }
+
+
+    /* SHOW ENTER WHEN HOVERING */
+
+    .creature:hover .enter-button {
+        opacity: 1;
+    }
+
+
+    /* ENTER HOVER COLOR */
+
+    .enter-button:hover {
+        color: #aaaaaa;
+    }
+
+    /* RAI-BOT */
+
+.rai-bot {
+    position: fixed;
+
+    right: 25px;
+    bottom: 15px;
+
+    width: 170px;
+
+    z-index: 1000;
+}
+
+/* RAI-BOT POSES */
+
+.rai-bot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* POSE 1 = DEFAULT */
+
+.rai-pose-1 {
+    opacity: 1;
+}
+
+/* ALL OTHER POSES SIT ON TOP */
+
+.rai-pose-2,
+.rai-pose-3,
+.rai-pose-4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+}
+
+.rai-speech {
+    position: absolute;
+
+    bottom: 90%;
+    right: 70%;
+
+    width: 150px;
+
+    padding: 10px;
+
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+
+    color: black;
+
+    font-family: 'Conthrax Semibold';
+    font-size: 14px;
+
+    text-align: center;
+    text-decoration: underline;
+
+    cursor: pointer;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+}
+.rai-bot:hover .rai-speech {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.rai-bot:hover {
+    animation: raiHover 0.8s ease-in-out infinite;
+}
+
+@keyframes raiHover {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* SPINNING CORNER SYMBOL */
+
+.corner-symbol {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    top: -150px;
+    left: -90px;
+    z-index: 999;
+    pointer-events: none;
+}
+
+.corner-symbol img {
+    width: 400px;
+    height: 400px;
+    animation: cornerSpin 10s linear infinite;
+}
+
+@keyframes cornerSpin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+</style>
+
+
+
+<script>
+const raiBot = document.querySelector(".rai-bot");
+const raiSpeech = document.getElementById("raiSpeech");
+
+const raiLines = [
+    "hello.",
+    "welcome to my portfolio.",
+    "take a look around.",
+    "go check out my projects.",
+    "..."
+];
+
+const raiPoses = [
+    document.querySelector(".rai-pose-2"),
+    document.querySelector(".rai-pose-2"),
+    document.querySelector(".rai-pose-2"),
+    document.querySelector(".rai-pose-3"),
+    document.querySelector(".rai-pose-4")
+];
+
+let raiLine = 0;
+
+raiSpeech.addEventListener("click", function(event) {
+    event.stopPropagation();
+
+    raiLine++;
+
+    if (raiLine >= raiLines.length) {
+        raiLine = 0;
+    }
+
+    raiSpeech.textContent = raiLines[raiLine];
+
+    /* Hide all poses */
+
+    document.querySelector(".rai-pose-1").style.opacity = "0";
+    document.querySelector(".rai-pose-2").style.opacity = "0";
+    document.querySelector(".rai-pose-3").style.opacity = "0";
+    document.querySelector(".rai-pose-4").style.opacity = "0";
+
+    /* Show the pose for this dialogue */
+
+    raiPoses[raiLine].style.opacity = "1";
+});
+
+/* RETURN TO DEFAULT POSE WHEN MOUSE LEAVES */
+
+raiBot.addEventListener("mouseleave", function() {
+    raiLine = 0;
+    raiSpeech.textContent = raiLines[0];
+
+    document.querySelector(".rai-pose-1").style.opacity = "1";
+    document.querySelector(".rai-pose-2").style.opacity = "0";
+    document.querySelector(".rai-pose-3").style.opacity = "0";
+    document.querySelector(".rai-pose-4").style.opacity = "0";
+});
+</script>
